@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: backend-hackaton
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: backend.settings  # cambia esto si tienes otro módulo
+      - key: SECRET_KEY
+        value: your-secret-key  # o usa el panel de Render para definirlo
